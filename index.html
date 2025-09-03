@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SwiftHaul — Junk Removal Made Easy</title>
+  <meta name="description" content="Fast, affordable, eco-friendly junk removal. Same-day pickups, transparent pricing, and licensed pros." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Decorative background blobs -->
+  <div class="bg-blob bg-blob--one" aria-hidden="true"></div>
+  <div class="bg-blob bg-blob--two" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="SwiftHaul Home">
+        <!-- Inline logo -->
+        <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#00D4FF"/>
+              <stop offset="1" stop-color="#42FFA6"/>
+            </linearGradient>
+          </defs>
+          <rect x="6" y="10" width="52" height="32" rx="6" fill="url(#g)"/>
+          <circle cx="22" cy="48" r="6" fill="#0b1220"/>
+          <circle cx="46" cy="48" r="6" fill="#0b1220"/>
+          <path d="M10 32h48" stroke="#0b1220" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-text">SwiftHaul</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Primary">
+        <ul>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#process" class="nav-link">How it Works</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="#contact" class="btn btn--sm btn--primary">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section-pad">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 class="hero-title">
+            Junk Removal that’s <span class="underline">Fast</span>, <span class="underline">Friendly</span>, and <span class="underline">Fair</span>.
+          </h1>
+          <p class="hero-sub">
+            Same-day pickups. Up-front pricing. Eco-friendly disposal. We clear the clutter so you can love your space again.
+          </p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn--primary btn--lg">Book Free Estimate</a>
+            <a href="#pricing" class="btn btn--ghost btn--lg">See Pricing</a>
+          </div>
+          <div class="hero-badges">
+            <span class="badge">Licensed & Insured</span>
+            <span class="badge">95% On-time</span>
+            <span class="badge">Recycling First</span>
+          </div>
+        </div>
+
+        <div class="hero-card glass reveal">
+          <div class="hero-card__header">
+            <h3>Instant Estimate</h3>
+            <p class="muted">2 steps — no obligation</p>
+          </div>
+          <form id="instantForm" class="hero-form" novalidate>
+            <label>
+              <span>Type of Junk</span>
+              <select name="type" required>
+                <option value="">Select an item</option>
+                <option>Household Items</option>
+                <option>Construction Debris</option>
+                <option>Yard Waste</option>
+                <option>Appliances</option>
+                <option>Furniture</option>
+                <option>Electronics</option>
+              </select>
+            </label>
+            <label>
+              <span>Estimated Load Size</span>
+              <input type="range" min="1" max="8" step="1" value="2" id="loadRange" />
+              <div class="range-meta"><span id="rangeLabel">¼ Truck</span><span class="muted">Up to 2 cubic yards</span></div>
+            </label>
+            <button type="submit" class="btn btn--primary btn--full">Get Ballpark Price</button>
+            <p class="tiny muted">Final price confirmed on-site. No surprises.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section-pad">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">What We Take</h2>
+          <p class="muted">From single items to full property cleanouts—if it’s non-hazardous, we’ll haul it.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M4 7v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3>Appliances & Electronics</h3>
+            <p>Fridges, washers, TVs, e-waste—responsibly recycled when possible.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11h18M6 7h12M6 15h12M8 19h8" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3>Furniture & Mattresses</h3>
+            <p>Couches, dressers, bed frames—single-item pickups or whole rooms.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18l16-6L4 6v12z" fill="currentColor"/></svg>
+            </div>
+            <h3>Construction Debris</h3>
+            <p>Drywall, lumber, tile, fixtures—contractor-friendly scheduling.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l6-6 4 4 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3>Yard Waste</h3>
+            <p>Branches, soil, clippings, fencing—seasonal cleanups made easy.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section-pad section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">How It Works</h2>
+          <p class="muted">Simple, transparent, and on your schedule.</p>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">1</span>
+            <h3>Call or Book</h3>
+            <p>Tell us what you’ve got. We’ll give a rough estimate and confirm a 2-hour arrival window.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">2</span>
+            <h3>On-Site Quote</h3>
+            <p>We’ll see the load, confirm a firm price, and get your thumbs-up before lifting a finger.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">3</span>
+            <h3>We Haul. You Breathe.</h3>
+            <p>Fast removal, sweep-up, and eco-friendly disposal. Space restored—stress removed.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="section-pad">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Transparent Pricing</h2>
+          <p class="muted">Prices are based on <strong>truck space</strong>. No hidden fees. Labor included.</p>
+        </div>
+        <div class="pricing">
+          <div class="price-card reveal">
+            <h3>¼ Truck</h3>
+            <p class="price">$129–$199</p>
+            <ul>
+              <li>Great for single items</li>
+              <li>Up to ~2 cubic yards</li>
+              <li>Same-day available</li>
+            </ul>
+            <a href="#contact" class="btn btn--primary btn--full">Book ¼ Truck</a>
+          </div>
+          <div class="price-card price-card--pop reveal">
+            <div class="ribbon">Most Popular</div>
+            <h3>½ Truck</h3>
+            <p class="price">$229–$349</p>
+            <ul>
+              <li>Apartment cleanouts</li>
+              <li>Up to ~6 cubic yards</li>
+              <li>Priority scheduling</li>
+            </ul>
+            <a href="#contact" class="btn btn--primary btn--full">Book ½ Truck</a>
+          </div>
+          <div class="price-card reveal">
+            <h3>Full Truck</h3>
+            <p class="price">$449–$699</p>
+            <ul>
+              <li>Renovations & moves</li>
+              <li>Up to ~12 cubic yards</li>
+              <li>Multi-item discount</li>
+            </ul>
+            <a href="#contact" class="btn btn--primary btn--full">Book Full Truck</a>
+          </div>
+        </div>
+        <p class="tiny muted center">Final price depends on load size, access, and materials. Hazardous items not accepted.</p>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="section-pad section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Customers Love Us</h2>
+          <p class="muted">Real feedback from local homeowners, renters, and contractors.</p>
+        </div>
+        <div class="reviews">
+          <button class="carousel-btn" id="prevReview" aria-label="Previous review">‹</button>
+          <div class="review-track" id="reviewTrack">
+            <blockquote class="review glass">
+              <p>“They cleared an entire garage in under an hour and swept everything. Price was exactly what they quoted.”</p>
+              <footer>— Emily R.</footer>
+            </blockquote>
+            <blockquote class="review glass">
+              <p>“Booked in the morning, gone by lunch. Super professional and they recycled our old appliances.”</p>
+              <footer>— Jamal K.</footer>
+            </blockquote>
+            <blockquote class="review glass">
+              <p>“We used them after a kitchen remodel. Transparent pricing and they handled the heavy stuff like champs.”</p>
+              <footer>— Sofia M.</footer>
+            </blockquote>
+          </div>
+          <button class="carousel-btn" id="nextReview" aria-label="Next review">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section-pad">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Get Your Free Estimate</h2>
+          <p class="muted">Send a few details and a photo (optional). We’ll confirm your quote and arrival window.</p>
+        </div>
+
+        <div class="contact-grid">
+          <form id="contactForm" class="contact-form glass reveal" novalidate>
+            <div class="grid-2">
+              <label>
+                <span>Full Name</span>
+                <input type="text" name="name" placeholder="Jane Doe" required />
+              </label>
+              <label>
+                <span>Phone</span>
+                <input type="tel" name="phone" placeholder="(555) 123-4567" required />
+              </label>
+            </div>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              <span>Address</span>
+              <input type="text" name="address" placeholder="123 Main St, City" required />
+            </label>
+            <label>
+              <span>What needs hauling?</span>
+              <textarea name="message" rows="4" placeholder="Brief description of items & access (stairs, elevator, gate code)"></textarea>
+            </label>
+            <label class="file">
+              <span>Attach Photo (optional)</span>
+              <input type="file" id="photo" accept="image/*" />
+              <div id="fileName" class="tiny muted"></div>
+            </label>
+            <div class="agree">
+              <input type="checkbox" id="agree" required />
+              <label for="agree">I agree to be contacted about my estimate.</label>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Request Estimate</button>
+            <p class="tiny muted">We’ll never share your info. Typical reply time: under 15 minutes during business hours.</p>
+            <div id="formAlert" class="alert" role="status" aria-live="polite"></div>
+          </form>
+
+          <aside class="contact-aside reveal">
+            <div class="contact-card">
+              <h3>Service Area</h3>
+              <p>Serving the metro area & surrounding suburbs. Same-day pickups available.</p>
+              <ul class="ticks">
+                <li>Flexible 2-hour windows</li>
+                <li>All major payment methods</li>
+                <li>Fully licensed & insured</li>
+              </ul>
+              <a href="tel:+15551234567" class="btn btn--ghost btn--full">Call (555) 123-4567</a>
+            </div>
+            <div class="hours-card glass">
+              <h4>Hours</h4>
+              <p>Mon–Sat: 7am–7pm<br>Sun: 9am–3pm</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-text">SwiftHaul</span>
+        <span class="muted tiny">© <span id="year"></span> SwiftHaul Junk Removal. All rights reserved.</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
